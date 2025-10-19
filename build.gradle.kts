@@ -36,8 +36,7 @@ dependencies {
 publishing {
     publications {
         create<MavenPublication>("maven") {
-            artifactId = "wintercore"
-            artifact(tasks.shadowJar) {}
+            from(components["java"])
         }
     }
 }
