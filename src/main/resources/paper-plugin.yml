@@ -1,6 +1,6 @@
-name: MapacheeeLibs
+name: MapacheeeLib
 version: 1.0.0
-main: me.mapacheee.lib.MapacheeeLibsPlugin
+main: me.mapacheee.lib.MapacheeeLibPlugin
 api-version: "1.20"
 description: A core for Mapachee's plugins
 authors: ["Mapacheee"]

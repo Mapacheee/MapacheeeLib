@@ -6,17 +6,17 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 @WinterBootPlugin
-public class MapacheeeLibsPlugin extends PaperWinterPlugin {
+public class MapacheeeLibPlugin extends PaperWinterPlugin {
 
-    private static Logger LOGGER = LoggerFactory.getLogger(MapacheeeLibsPlugin.class);
+    private static Logger LOGGER = LoggerFactory.getLogger(MapacheeeLibPlugin.class);
 
     @Override
     public void onPluginEnable() {
-        LOGGER.info("MapacheeeLibsPlugin is enabled!");
+        LOGGER.info("MapacheeeLibPlugin is enabled!");
     }
 
     @Override
     public void onPluginDisable() {
-        LOGGER.info("MapacheeeLibsPlugin is disabled!");
+        LOGGER.info("MapacheeeLibPlugin is disabled!");
     }
 }
