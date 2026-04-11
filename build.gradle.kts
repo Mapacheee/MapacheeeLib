@@ -39,6 +39,7 @@ dependencies {
 publishing {
     publications {
         create<MavenPublication>("maven") {
+            artifactId = "MapacheeeLib"
             from(components["java"])
         }
     }
