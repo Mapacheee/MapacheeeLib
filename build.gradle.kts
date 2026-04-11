@@ -32,6 +32,7 @@ dependencies {
 
     implementation("org.spongepowered:configurate-core:4.2.0")
     implementation("org.spongepowered:configurate-yaml:4.2.0")
+    implementation("com.github.ben-manes.caffeine:caffeine:3.2.3")
     //api("org.incendo:cloud-paper:2.0.0-beta.10")
     //api("org.incendo:cloud-annotations:2.0.0")
 }
@@ -48,4 +49,5 @@ publishing {
 tasks.shadowJar {
     archiveClassifier.set("")
     mergeServiceFiles()
+    relocate("com.github.benmanes.caffeine", "me.mapacheee.lib.caffeine")
 }
