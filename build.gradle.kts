@@ -29,8 +29,8 @@ repositories {
 dependencies {
     compileOnly("io.papermc.paper:paper-api:1.21.11-R0.1-SNAPSHOT")
 
-    api("com.thewinterframework:paper:2.1.0")
-    annotationProcessor("com.thewinterframework:paper:2.1.0")
+    api("com.thewinterframework:paper:2.1.1")
+    annotationProcessor("com.thewinterframework:paper:2.1.1")
     api("com.thewinterframework:configuration:2.0.0")
     annotationProcessor("com.thewinterframework:configuration:2.0.0")
     api("com.thewinterframework:command:2.0.0")
