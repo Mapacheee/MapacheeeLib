@@ -24,6 +24,7 @@ repositories {
     }
     maven("https://repo.papermc.io/repository/maven-public/")
     maven("https://jitpack.io")
+    maven("https://repo.faststats.dev/releases")
 }
 
 dependencies {
@@ -39,6 +40,7 @@ dependencies {
     implementation("org.spongepowered:configurate-core:4.2.0")
     implementation("org.spongepowered:configurate-yaml:4.2.0")
     implementation("com.github.ben-manes.caffeine:caffeine:3.2.3")
+    implementation("dev.faststats.metrics:bukkit:0.29.0")
     compileOnly("org.apiguardian:apiguardian-api:1.1.2")
     api("org.incendo:cloud-paper:2.0.0")
     api("org.incendo:cloud-annotations:2.0.0")
@@ -78,4 +80,5 @@ tasks.shadowJar {
         duplicatesStrategy = DuplicatesStrategy.EXCLUDE
     }
     relocate("com.github.benmanes.caffeine", "me.mapacheee.lib.caffeine")
+    relocate("dev.faststats", "me.mapacheee.lib.faststats")
 }
