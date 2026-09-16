@@ -39,6 +39,7 @@ dependencies {
     implementation("org.spongepowered:configurate-core:4.2.0")
     implementation("org.spongepowered:configurate-yaml:4.2.0")
     implementation("com.github.ben-manes.caffeine:caffeine:3.2.3")
+    compileOnly("org.apiguardian:apiguardian-api:1.1.2")
     api("org.incendo:cloud-paper:2.0.0")
     api("org.incendo:cloud-annotations:2.0.0")
 }
@@ -73,5 +74,8 @@ tasks.compileJava {
 tasks.shadowJar {
     archiveClassifier.set("")
     mergeServiceFiles()
+    filesMatching("org/incendo/cloud/bukkit/parser/ItemStackParser*.class") {
+        duplicatesStrategy = DuplicatesStrategy.EXCLUDE
+    }
     relocate("com.github.benmanes.caffeine", "me.mapacheee.lib.caffeine")
 }
