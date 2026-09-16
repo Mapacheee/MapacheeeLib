@@ -29,17 +29,17 @@ repositories {
 dependencies {
     compileOnly("io.papermc.paper:paper-api:1.21.11-R0.1-SNAPSHOT")
 
-    api("com.thewinterframework:paper:2.1.1")
-    annotationProcessor("com.thewinterframework:paper:2.1.1")
-    api("com.thewinterframework:configuration:2.0.0")
-    annotationProcessor("com.thewinterframework:configuration:2.0.0")
+    api("com.thewinterframework:paper:2.1.4")
+    annotationProcessor("com.thewinterframework:paper:2.1.4")
+    api("com.thewinterframework:configuration:2.0.2")
+    annotationProcessor("com.thewinterframework:configuration:2.0.2")
     api("com.thewinterframework:command:2.0.0")
     annotationProcessor("com.thewinterframework:command:2.0.0")
 
     implementation("org.spongepowered:configurate-core:4.2.0")
     implementation("org.spongepowered:configurate-yaml:4.2.0")
     implementation("com.github.ben-manes.caffeine:caffeine:3.2.3")
-    api("org.incendo:cloud-paper:2.0.0-beta.17")
+    api("org.incendo:cloud-paper:2.0.0")
     api("org.incendo:cloud-annotations:2.0.0")
 }
 
