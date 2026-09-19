@@ -73,6 +73,14 @@ tasks.compileJava {
     classpath = classpath + files(generatedResourcesDir)
 }
 
+tasks.processResources {
+    val pluginVersion = project.version.toString()
+    inputs.property("version", pluginVersion)
+    filesMatching(listOf("plugin.yml", "paper-plugin.yml")) {
+        expand("version" to pluginVersion)
+    }
+}
+
 tasks.shadowJar {
     archiveClassifier.set("")
     mergeServiceFiles()
@@ -82,3 +90,4 @@ tasks.shadowJar {
     relocate("com.github.benmanes.caffeine", "me.mapacheee.lib.caffeine")
     relocate("dev.faststats", "me.mapacheee.lib.faststats")
 }
+
