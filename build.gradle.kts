@@ -30,8 +30,8 @@ repositories {
 dependencies {
     compileOnly("io.papermc.paper:paper-api:1.21.11-R0.1-SNAPSHOT")
 
-    api("com.thewinterframework:paper:2.1.4")
-    annotationProcessor("com.thewinterframework:paper:2.1.4")
+    api("com.thewinterframework:paper:2.1.5")
+    annotationProcessor("com.thewinterframework:paper:2.1.5")
     api("com.thewinterframework:configuration:2.0.2")
     annotationProcessor("com.thewinterframework:configuration:2.0.2")
     api("com.thewinterframework:command:2.0.0")
@@ -89,5 +89,13 @@ tasks.shadowJar {
     }
     relocate("com.github.benmanes.caffeine", "me.mapacheee.lib.caffeine")
     relocate("dev.faststats", "me.mapacheee.lib.faststats")
+}
+
+tasks.jar {
+    archiveClassifier.set("plain")
+}
+
+tasks.build {
+    dependsOn(tasks.shadowJar)
 }
 
