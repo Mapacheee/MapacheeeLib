@@ -41,9 +41,8 @@ dependencies {
     implementation("org.spongepowered:configurate-yaml:4.2.0")
     implementation("com.github.ben-manes.caffeine:caffeine:3.2.3")
     implementation("dev.faststats.metrics:bukkit:0.29.0")
-    compileOnly("org.apiguardian:apiguardian-api:1.1.2")
-    api("org.incendo:cloud-paper:2.0.0")
-    api("org.incendo:cloud-annotations:2.0.0")
+    api("org.incendo:cloud-paper:2.0.1")
+    api("org.incendo:cloud-annotations:2.1.0")
 }
 
 publishing {
@@ -54,7 +53,6 @@ publishing {
         }
     }
 }
-
 
 tasks.processResources {
     val pluginVersion = project.version.toString()
@@ -67,9 +65,6 @@ tasks.processResources {
 tasks.shadowJar {
     archiveClassifier.set("")
     mergeServiceFiles()
-    filesMatching("org/incendo/cloud/bukkit/parser/ItemStackParser*.class") {
-        duplicatesStrategy = DuplicatesStrategy.EXCLUDE
-    }
     relocate("com.github.benmanes.caffeine", "me.mapacheee.lib.caffeine")
     relocate("dev.faststats", "me.mapacheee.lib.faststats")
 }
