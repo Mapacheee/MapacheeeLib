@@ -55,23 +55,6 @@ publishing {
     }
 }
 
-// Make resources available on the compile classpath so Winter's annotation processor
-// can find META-INF/winter/exposed-classes.txt during annotation processing
-val generatedResourcesDir = layout.buildDirectory.dir("generated/classpath/winter").get().asFile
-
-tasks.register("generateWinterExposedClasses") {
-    doLast {
-        val metaInfDir = File(generatedResourcesDir, "META-INF/winter")
-        metaInfDir.mkdirs()
-        val file = File(metaInfDir, "exposed-classes.txt")
-        file.createNewFile()
-    }
-}
-
-tasks.compileJava {
-    dependsOn("generateWinterExposedClasses")
-    classpath = classpath + files(generatedResourcesDir)
-}
 
 tasks.processResources {
     val pluginVersion = project.version.toString()
