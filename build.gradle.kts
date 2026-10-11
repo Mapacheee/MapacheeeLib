@@ -56,6 +56,17 @@ dependencies {
     implementation(libs.faststats.bukkit)
 }
 
+configurations {
+    named("apiElements") {
+        outgoing.artifacts.clear()
+        outgoing.artifact(tasks.shadowJar)
+    }
+    named("runtimeElements") {
+        outgoing.artifacts.clear()
+        outgoing.artifact(tasks.shadowJar)
+    }
+}
+
 publishing {
     publications {
         create<MavenPublication>("maven") {
