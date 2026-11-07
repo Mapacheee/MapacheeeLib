@@ -19,8 +19,8 @@ java {
 }
 
 repositories {
-    mavenLocal()
     mavenCentral()
+    mavenLocal()
     gradlePluginPortal()
     maven("https://central.sonatype.com/repository/maven-snapshots/") {
         name = "sonatype-snapshots"
@@ -78,7 +78,7 @@ publishing {
 
 tasks.withType<JavaCompile>().configureEach {
     options.encoding = "UTF-8"
-    options.release.set(21)
+    options.release.set(25)
     options.compilerArgs.add("-parameters")
 }
 
@@ -87,6 +87,7 @@ tasks {
         archiveClassifier.set("plain")
     }
     processResources {
+        exclude("winter.properties")
         val pluginVersion = project.version.toString()
         inputs.property("version", pluginVersion)
         filesMatching(listOf("plugin.yml", "paper-plugin.yml")) {
