@@ -4,7 +4,7 @@ paper-api = "1.21.11-R0.1-SNAPSHOT"
 
 # Winter Framework
 winter-paper = "3.0.0"
-winter-configuration = "2.0.3"
+winter-configuration = "3.0.1-SNAPSHOT"
 winter-command = "2.0.0"
 
 # Commands & Configuration
