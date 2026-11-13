@@ -4,3 +4,4 @@ main: me.mapacheee.lib.MapacheeeLibPlugin
 api-version: "1.20"
 description: A core for Mapachee's plugins
 authors: ["Mapacheee"]
+folia-supported: true
